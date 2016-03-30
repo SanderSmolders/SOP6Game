@@ -1,0 +1,7 @@
+<target name="deploy"
+    description="deploys application to glassfish">
+    <exec failonerror="true" executable="cmd">
+     <arg value="/c" />
+     <arg value="asadmin --user ${gfUser} --passwordfile ${gfPassFile} --host localhost:8080 deploy build/${war}" />
+    </exec>
+</target>
